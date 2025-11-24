@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    # same labels we used in the
+    # pod definition file metadata
+    app: myapp
+    type: back-end
