@@ -1,0 +1,10 @@
+# load it with kubectl create -f config-map.yaml
+# then use it in the pod with configMapRef
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+
+data:
+  APP_COLOR: blue
+  APP_MODE: prod
