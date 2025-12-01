@@ -1,0 +1,13 @@
+apiVersion:
+kind:
+metadata:
+
+spec:
+  securityContext:
+    runAsUser: 1000 # use user 1000 at pod level
+  containers:
+    - name: ...
+      securityContext:
+        runAsUser: 1000 # use user 1000 at container level
+        capabilities:
+          add: ["MAC_ADMIN"] # capabilities are only supported at container level
