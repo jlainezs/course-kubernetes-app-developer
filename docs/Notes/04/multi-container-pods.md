@@ -72,7 +72,7 @@ spec:
 As initContainers is an array we can define as many containers as needed and they'll be executed in sequence before the `web-app` container.
 
 ## Sidecar containers
-We define the additional `initContainers` property but we set the `restartPolicy` of them to `Always` 
+We define the additional `initContainers` property but we set the `restartPolicy` of them to `Always`
 
 ```Sidecar-containers-pod.yaml
 apiVersion: v1
@@ -95,3 +95,7 @@ spec:
 ```
 
 As initContainers is an array we can define as many containers as needed and they'll be executed in sequence before the `web-app` container.
+
+## References
+
+- [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
