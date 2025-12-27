@@ -1,11 +1,10 @@
-What is the rewrite-target option?
+# What is the rewrite-target option?
 
 Different ingress controllers have different options that can be used to customise the way it works. NGINX Ingress controller has many options that can be seen here. I would like to explain one such option that we will use in our labs. The Rewrite target option.
 
+Our *watch* app displays the video streaming webpage at http://<watch-service>:<port>/
 
-Our watch app displays the video streaming webpage at http://<watch-service>:<port>/
-
-Our wear app displays the apparel webpage at http://<wear-service>:<port>/
+Our *wear* app displays the apparel webpage at http://<wear-service>:<port>/
 
 We must configure Ingress to achieve the below. When user visits the URL on the left, his request should be forwarded internally to the URL on the right. Note that the /watch and /wear URL path are what we configure on the ingress controller so we can forwarded users to the appropriate application in the backend. The applications don't have this URL/Path configured on them:
 
