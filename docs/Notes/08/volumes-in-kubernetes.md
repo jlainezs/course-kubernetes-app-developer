@@ -4,6 +4,21 @@ As in Docker containers, Kubernetes pods are transient, as well as its data. If 
 
 ## Basic volume declaration
 
+```
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-log
+spec:
+  persistentVolumeReclaimPolicy: Retain
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 100Mi
+  hostPath:
+    path: /pv/log
+```
+
 The following pod uses a dictory volume named `data-volume` defined in the host `/data` directory and accessible though the  `/opt` directory in the pod filesystem.
 
 ```
