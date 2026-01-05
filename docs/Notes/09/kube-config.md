@@ -166,3 +166,13 @@ clusters:
   certificate-authority-data: <base64_encoded_certificate_file_content>
 ...
 ```
+## Default configuration file
+As default, `kubectl` looks for  `$HOME/.kube/config` . We can use `--kubeconfig` flag to use a different configuration file. We can also, use a different default configuration file by defining the environment variable `KUBECONFIG` to  the file path of the default configuration file we want to use.
+We can define it in our  `$HOME/.bashrc` file:
+
+```.bashrc
+...
+KUBECONFIG=/path/to/my/config
+export $KUBECONFIG
+...
+```
