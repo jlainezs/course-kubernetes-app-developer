@@ -60,3 +60,13 @@ It is possible to use several authorization modes:
 kube-apiserver --authorization-mode=Node,RBAC,Webhook
 ```
 On that case, a request accepted if any of the modes accepts the request.
+
+## Check authorization mode
+The check the allowed authentication modes in a cluster we run the following command:
+
+``` shell
+$ kubectl describe pod kube-apiserver-controlplane -n kube-system | grep "authorization-mode"
+      --authorization-mode=Node,RBAC
+```
+
+On that case, the cluster accepts Node and RBAC authorization modes.

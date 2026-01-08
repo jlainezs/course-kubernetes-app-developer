@@ -87,9 +87,18 @@ no
 ```
 
 ### Impersonation
-Administrators can impersonate users for check
+Administrators can impersonate users adding the `--as` flag followed by an user name on any (?) command.
+
+To check permissions:
 
 ```shell
 $ kubectl auth cant-i create deployments --as dev-user
 no
+```
+
+or:
+
+```shell
+$ kubectl get deployments --as dev-user
+Error from server (Forbidden): deployments.apps is forbidden: User "dev-user" cannot list resource "deployments" in API group "apps" in the namespace "default"
 ```
