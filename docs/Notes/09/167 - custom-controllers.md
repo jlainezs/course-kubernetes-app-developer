@@ -23,3 +23,4 @@ $ ./sample-controller -kubeconfig=$HOME/.kube/config
 ## References
 
 [^sample-controller]: [Kubernetes sample controller](https://github.com/kubernetes/sample-controller)
+[^build-custom-controllers]: [Building Custom Controllers in Kubernetes: A Comprehensive Guide](https://wafatech.sa/blog/devops/kubernetes/building-custom-controllers-in-kubernetes-a-comprehensive-guide/)
